@@ -1,0 +1,146 @@
+html, body{
+    font-family: Lato, sans-serif;
+    margin: 0;
+
+    font-size: 16px;
+
+}
+
+
+.wrapper{
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container{
+    max-width: 1260px;
+    padding: 0 15px;
+    margin: 0 auto;
+} 
+
+
+.button{
+    border-radius: 4px;
+    line-height: 325%;
+    border-radius: 4px;
+    height: 52px;
+    background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    padding: 0 40px;
+}
+
+
+.logo{
+
+}
+
+a{
+    font-family: Lato, sans-serif;
+    margin: 0;
+    color: #424551;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!! */
+.header{
+    font-weight: 700;
+
+}
+
+.h__top{
+
+}
+.header__top-inner{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    text-decoration: none;
+}
+.header__nav{
+    margin-right: auto;
+}
+
+.header__nav-list{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+
+    font-size: 16px;
+    
+}
+
+.button:hover{
+    transform: scale(1.04);
+}
+
+.header__nav-item{
+    margin-right: 40px;
+    
+}
+/* color: #FF3F3A; */
+.header__nav-link{
+    color: #424551;
+    font-weight: 700;
+    line-height: 160%;
+    white-space: nowrap;
+    
+}
+.header__nav-link:hover{
+    color: #FF3F3A;
+    transition: all .3s;
+}
+.header__nav-item:last-child{
+    margin-right: 0px;
+}
+.header__top-btn:hover{
+    transition: all .3s;
+    color: #FF3F3A;
+}
+.header__logo{
+    margin-right: 60px;
+}
+
+.header__btn-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__user{
+    white-space: nowrap;
+    position: relative;
+    padding-left: 28px;
+}
+.header__top-btn::before{
+    content: "";
+    display: block;
+    background:  url(/img/icons/Profile.svg) no-repeat;
+    background-color:black ;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+}
+.header__top-button{
+    margin-right: 36px;
+    white-space: nowrap;
+}
+
+.header__top-btn{
+    white-space: nowrap;
+}
+
