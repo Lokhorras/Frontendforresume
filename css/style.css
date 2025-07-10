@@ -5,22 +5,20 @@ html, body{
     font-size: 16px;
 
 }
-
-
 .wrapper{
     min-height: 100%;
     width: 100%;
     overflow: hidden;
 }
-
 .container{
     max-width: 1260px;
     padding: 0 15px;
     margin: 0 auto;
+    height: 100%;
 } 
-
-
 .button{
+    white-space: nowrap; 
+    display: inline-block;
     border-radius: 4px;
     line-height: 325%;
     border-radius: 4px;
@@ -31,10 +29,48 @@ html, body{
     font-weight: 700;
     padding: 0 40px;
 }
+.button-empty {
+    position: relative;
+    color: transparent;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-clip: padding-box;
+    z-index: 1;
+}
+.button-empty::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px; /* для компенсации border */
+    border-radius: inherit;
+    background: 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)) padding-box,
+        linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%) border-box;
+    border: 1px solid transparent;
+}
 
+.button-empty span {
+    white-space: nowrap;
+    background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.button-empty:hover::before {
+    white-space: nowrap;
+    background: 
+        linear-gradient(45deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)) padding-box,
+        linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%) border-box;
+}
 
-.logo{
-
+.button-empty:hover {
+    transform: scale(1.04);
+    transition: all .3s;
 }
 
 a{
@@ -42,15 +78,17 @@ a{
     margin: 0;
     color: #424551;
 }
-
-
 /* !!!!!!!!!!!!!!!!!!!!!!!!!! */
 .header{
+    background: url(../img/decor/shapes.svg) 50% 30% / cover no-repeat, linear-gradient(45deg, rgba(255, 63, 58, .2) 0%, rgba(247, 94, 5, .2) 100%) border-box;
     font-weight: 700;
+    height: 100vh;
+
 
 }
 
 .h__top{
+
 
 }
 .header__top-inner{
@@ -87,7 +125,7 @@ li{
     margin-right: 40px;
     
 }
-/* color: #FF3F3A; */
+
 .header__nav-link{
     color: #424551;
     font-weight: 700;
@@ -122,15 +160,14 @@ li{
     position: relative;
     padding-left: 28px;
 }
-.header__top-btn::before{
+.header__user::before{
     content: "";
     display: block;
-    background:  url(/img/icons/Profile.svg) no-repeat;
-    background-color:black ;
+    background:  url(../img/icons/Profile.svg)  no-repeat;
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
 
 
@@ -144,3 +181,139 @@ li{
     white-space: nowrap;
 }
 
+/* !!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.header__body-inner{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header__row, .header__row-list {
+    background: none;
+    outline: none;
+}
+
+.header__main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1e212c;;
+    margin: 70px 0;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.header_play{
+    display: inline-flex;  
+    align-items: center;
+    margin-bottom: 24px;
+}
+.header_play svg{
+    margin-right: 16px;
+}
+
+.header_play svg:hover{
+    box-shadow: 0px 0px 8px 20px #ff3f3a;
+    border-radius: 100%;
+    transition: all .3s;
+}
+
+
+.header__content{
+    margin-right: 30px;
+}
+
+.header__title{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    max-width: 600px;
+    margin-bottom: 60px;
+}
+h1{
+    margin: 0;
+}
+
+.header__content-buttons{
+    max-width: 372px;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+
+
+ul, li { list-style: none; }
+.header__row{
+    align-items: center;
+    padding: 0px;
+    
+    
+}
+.header__row-inner{
+    align-items: center;
+    line-height: 60px;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.header__row span{
+    color: #1e212c;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 130%;
+    vertical-align: middle;
+
+}
+
+
+.header__row-item:last-child{
+    margin-right: 0px;
+    align-items: center;
+
+}
+
+
+.h__bottom .container{
+    padding: 0;
+    flex: 1 1 auto;
+
+}
+
+
+
+.header__row {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    white-space: nowrap; 
+}
+
+.header__row-item {
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    align-items: center;
+    margin-right: 0; 
+    white-space: nowrap; 
+}
+
+.header__dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #ff3f3a;
+    border-radius: 50%;
+    margin: 0 70px;
+    vertical-align: middle;
+    flex-shrink: 0; }
